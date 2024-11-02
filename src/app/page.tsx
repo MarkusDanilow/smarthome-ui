@@ -1,6 +1,7 @@
 import { getRooms, createRoom, updateRoom, deleteRoom } from '../lib/api'
 import RoomForm from '../components/RoomForm'
 import RoomActions from '../components/RoomActions'
+import RoomList from '@/components/RoomList'
 
 export default async function Home() {
   const rooms = await getRooms()
@@ -27,12 +28,7 @@ export default async function Home() {
         {rooms.map((room) => (
           <div key={room.id} className="bg-gray-50 rounded-lg p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg">
             <h2 className="text-xl font-semibold text-gray-800 mb-2">{room.name}</h2>
-            <RoomActions
-              roomId={room.id}
-              roomName={room.name}
-              onEdit={editRoom}
-              onDelete={removeRoom}
-            />
+            <RoomList rooms={rooms}/>
           </div>
         ))}
       </div>
