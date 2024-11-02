@@ -14,12 +14,7 @@ export default async function Home() {
     <div className="bg-white rounded-lg shadow-xl p-6">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Rooms</h1>
       <div className="space-y-6">
-        {rooms.map((room) => (
-          <div key={room.id} className="bg-gray-50 rounded-lg p-6 shadow-md transition duration-300 ease-in-out hover:shadow-lg">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">{room.name}</h2>
-            <RoomList rooms={rooms}/>
-          </div>
-        ))}
+        <RoomList rooms={rooms}/>
       </div>
       <div className="mt-8">
         <h2 className="text-2xl font-bold mb-4 text-gray-800">Add New Room</h2>
