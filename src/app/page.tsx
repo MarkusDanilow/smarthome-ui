@@ -1,6 +1,5 @@
-import { getRooms, createRoom, updateRoom, deleteRoom } from '../lib/api'
+import { getRooms, createRoom } from '../lib/api'
 import RoomForm from '../components/RoomForm'
-import RoomActions from '../components/RoomActions'
 import RoomList from '@/components/RoomList'
 
 export default async function Home() {
@@ -9,16 +8,6 @@ export default async function Home() {
   async function addRoom(name: string) {
     'use server'
     await createRoom(name)
-  }
-
-  async function editRoom(id: string, name: string) {
-    'use server'
-    await updateRoom(id, name)
-  }
-
-  async function removeRoom(id: string) {
-    'use server'
-    await deleteRoom(id)
   }
 
   return (
