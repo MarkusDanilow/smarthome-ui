@@ -1,6 +1,8 @@
 import '../styles/globals.css'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Room Sensor Management',
   description: 'Manage rooms and sensor data',
