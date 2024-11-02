@@ -1,8 +1,6 @@
 import { getRooms, createRoom, updateRoom, deleteRoom } from '../lib/api'
-import RoomList from '../components/RoomList'
 import RoomForm from '../components/RoomForm'
 import RoomActions from '../components/RoomActions'
-import { PlusCircle } from 'lucide-react'
 
 export default async function Home() {
   const rooms = await getRooms()
